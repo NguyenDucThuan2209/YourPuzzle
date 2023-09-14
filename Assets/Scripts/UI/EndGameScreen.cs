@@ -5,13 +5,35 @@ using UnityEngine.UI;
 
 public class EndGameScreen : UIScreen
 {
-    [SerializeField] Text m_scoreText;
-    [SerializeField] Text m_highScoreText;
+    [SerializeField] TMPro.TextMeshProUGUI[] m_englishText;
+    [SerializeField] TMPro.TextMeshProUGUI[] m_germanText;
 
-    public void SetScoreText(int score, int highScore)
+    public override void ShowScreen()
     {
-        m_scoreText.text = "SCORE " + score;
-        m_highScoreText.text = "BEST " + highScore;
+        base.ShowScreen();
+        switch (MenuManager.Instance.CurrentLanguage)
+        {
+            case Language.English:
+                for (int i = 0; i < m_germanText.Length; i++)
+                {
+                    m_germanText[i].gameObject.SetActive(false);
+                }
+                for (int i = 0; i < m_englishText.Length; i++)
+                {
+                    m_englishText[i].gameObject.SetActive(true);
+                }
+                break;
+            case Language.German:
+                for (int i = 0; i < m_germanText.Length; i++)
+                {
+                    m_germanText[i].gameObject.SetActive(true);
+                }
+                for (int i = 0; i < m_englishText.Length; i++)
+                {
+                    m_englishText[i].gameObject.SetActive(false);
+                }
+                break;
+        }
     }
 
     public void OnHomeButtonPressed()

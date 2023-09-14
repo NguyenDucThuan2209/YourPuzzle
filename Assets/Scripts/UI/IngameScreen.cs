@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class IngameScreen : UIScreen
 {
-    [SerializeField] Text m_scoreText;
+    [SerializeField] TMPro.TextMeshProUGUI m_scoreText;
 
     public void SetScoreText(int score)
     {
-        m_scoreText.text = "BOX " + score;
+        m_scoreText.text = score.ToString();
     }
     public void OnPauseButtonPressed()
     {

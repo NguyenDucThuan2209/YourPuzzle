@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum Language
+{
+    English,
+    German
+}
+
 public class MenuManager : MonoBehaviour
 {
     private static MenuManager m_instance;
@@ -11,13 +17,14 @@ public class MenuManager : MonoBehaviour
     [SerializeField] MenuScreen m_menuScreen;
     [SerializeField] PauseScreen m_pauseScreen;
     [SerializeField] IngameScreen m_ingameScreen;
-    [SerializeField] SettingScreen m_settingScreen;
     [SerializeField] EndGameScreen m_endGameScreen;
     [Space]
     [SerializeField] Image m_menuBackground;
     [SerializeField] Image m_ingameBackground;
 
-    private const string POLICY_LINK = "https://doc-hosting.flycricket.io/get-pack-delivery-privacy-policy/9d7358f7-b13b-4967-9097-3a3d355265b2/privacy";
+    private Language m_currentLanguage;
+    public Language CurrentLanguage => m_currentLanguage;
+
     private void Awake()
     {
         if (m_instance != null)
@@ -33,7 +40,6 @@ public class MenuManager : MonoBehaviour
         m_menuScreen.HideScreen();
         m_pauseScreen.HideScreen();
         m_ingameScreen.HideScreen();
-        m_settingScreen.HideScreen();
         m_endGameScreen.HideScreen();
     }
 
@@ -47,18 +53,9 @@ public class MenuManager : MonoBehaviour
         m_menuBackground.enabled = false;
         m_ingameBackground.enabled = true;
     }
-    public void OpenSetting()
-    {
-        HideAllScreen();
-        m_settingScreen.ShowScreen();
-    }
-    public void OpenPrivacyAndPolicy()
-    {
-        Application.OpenURL(POLICY_LINK);
-    }
     public void PauseGame()
     {
-        HideAllScreen();
+        //HideAllScreen();
         m_pauseScreen.ShowScreen();
         GameManager.Instance.PauseGame();
 
@@ -76,7 +73,7 @@ public class MenuManager : MonoBehaviour
     }
     public void EndGame()
     {
-        HideAllScreen();
+        //HideAllScreen();
         m_endGameScreen.ShowScreen();
 
         m_menuBackground.enabled = true;
@@ -92,6 +89,9 @@ public class MenuManager : MonoBehaviour
     {
         m_ingameScreen.SetScoreText(score);
         m_menuScreen.SetHighScore(highScore);
-        m_endGameScreen.SetScoreText(score, highScore);
+    }
+    public void SetLanguage(Language language)
+    {
+        m_currentLanguage = language;
     }
 }

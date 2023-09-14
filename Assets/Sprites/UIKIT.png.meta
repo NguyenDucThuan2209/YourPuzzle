@@ -372,8 +372,8 @@ TextureImporter:
       name: ButtonGerman
       rect:
         serializedVersion: 2
-        x: 73
-        y: 108
+        x: 75
+        y: 124
         width: 94
         height: 104
       alignment: 0
@@ -410,6 +410,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ButtonEnglish_Select
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 235
+        width: 94
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc92d226ca24d2349913b916fb82efd7
+      internalID: -1968657095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonGerman_Select
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 124
+        width: 94
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659537e392380bf41b1bb719ab552edf
+      internalID: 1515819080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -426,13 +468,14 @@ TextureImporter:
       ButtonStart: 442566492
       GameTitle: 1314237433
       SliderFill: 1775216692
+      ButtonEnglish_Select: -1968657095
       SliderBackground: -1423292105
       PopupScreen: -898495028
+      ButtonGerman_Select: 2063122903
       ButtonPause: 2085354648
       Cross: 1315235549
       Background: -310901128
       WhiteSquare: -1247390843
-      UIKIT_1: 2063122903
       ButtonSound: 1763668769
       UIKIT_5: 1204971618
       ButtonGerman: 1864446150
