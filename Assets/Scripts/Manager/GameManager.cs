@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum GameState
 {
@@ -18,11 +19,13 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Properties")]
     [SerializeField] GameState m_state;
+    [SerializeField] float m_gameTimer;
     [SerializeField] Vector2 m_vertical;
     [SerializeField] Vector2 m_horizontal;
 
     private int m_score;
     private int m_bestScore;
+    private float m_currentTime;
 
     public GameState State => m_state;
     public Vector2 Vertical => m_vertical;
@@ -44,11 +47,20 @@ public class GameManager : MonoBehaviour
     {
         if (m_state != GameState.Playing) return;
 
+        if (m_currentTime > 0)
+        {
+            m_currentTime -= Time.deltaTime;
+            MenuManager.Instance.UpdateTimer(m_currentTime / m_gameTimer);
+        }
+        else
+        {
+            EndGame();
+        }
     }
 
     private void ResetGameData()
     {
-        
+        m_currentTime = m_gameTimer;
     }
     private void CalculateScreenSize()
     {
@@ -58,10 +70,12 @@ public class GameManager : MonoBehaviour
         m_vertical = new Vector2(bottomLeft.y, upperRight.y);
         m_horizontal = new Vector2(bottomLeft.x, upperRight.x);
     }
-    public void ScorePoint()
+    public void ScorePoint(int point = 1)
     {
-        m_score++;
+        m_score += point;
         m_bestScore = (m_bestScore < m_score) ? m_score : m_bestScore;
+
+        m_currentTime += point / 50;
 
         SoundManager.Instance.PlaySound("Score");
         MenuManager.Instance.SetScore(m_score, m_bestScore);
@@ -73,6 +87,8 @@ public class GameManager : MonoBehaviour
 
         ResetGameData();
         m_state = GameState.Playing;
+        MapManager.Instance.DisposeMap();
+        MapManager.Instance.InitializeMap();
     }
     public void PauseGame()
     {
@@ -94,6 +110,7 @@ public class GameManager : MonoBehaviour
 
         ResetGameData();
         MenuManager.Instance.EndGame();
+        SoundManager.Instance.PlaySound("GameOver");
     }
 
     #region IENumerator

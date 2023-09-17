@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3826824989978156122}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,9 +24,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3826824989978156120}
-  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5777779, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.6, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3826824990534127408}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 3826824989998492722}
   m_Layer: 0
   m_Name: Square (2)
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,9 +108,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3826824989998492720}
-  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.1555552, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6, y: -0.6, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3826824990534127408}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 4885865708732813838}
   m_Layer: 0
   m_Name: Piece_4_5
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,12 +215,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a0fe58ff5626d42a521ee6aa68c28c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_color: {r: 0, g: 0, b: 0, a: 0}
+  m_point: 40
+  m_color: {r: 1, g: 0, b: 0.54901963, a: 1}
   m_origin: {fileID: 3826824990534127408}
-  m_pattern:
-  - {x: 0, y: -1}
-  - {x: 1, y: -1}
-  - {x: 0, y: -2}
+  m_defaultScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_piecePatterns:
+  - x: 0
+    y: 1
+    Sprite: {fileID: 3826824989978156122}
+  - x: 1
+    y: 1
+    Sprite: {fileID: 3826824989998492722}
+  - x: 0
+    y: 2
+    Sprite: {fileID: 3826824990810238497}
 --- !u!61 &-2028557986855408734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -280,7 +288,7 @@ GameObject:
   - component: {fileID: 3826824990534127409}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,9 +301,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3826824990534127423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13, y: 0.26000005, z: 0}
-  m_LocalScale: {x: -0.45000002, y: 0.45000002, z: 0.45000002}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -0.13, y: 0.26, z: 0}
+  m_LocalScale: {x: 0.45, y: 0.45000002, z: 0.45000002}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3826824989978156121}
   - {fileID: 3826824989998492721}
@@ -367,7 +375,7 @@ GameObject:
   - component: {fileID: 3826824990810238497}
   m_Layer: 0
   m_Name: Square (3)
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379,9 +387,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3826824990810238511}
-  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5777778, y: -0.5777779, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.2, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3826824990534127408}

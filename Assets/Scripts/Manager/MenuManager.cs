@@ -19,6 +19,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] IngameScreen m_ingameScreen;
     [SerializeField] EndGameScreen m_endGameScreen;
     [Space]
+    [SerializeField] Slider m_timeSlider;
     [SerializeField] Image m_menuBackground;
     [SerializeField] Image m_ingameBackground;
 
@@ -83,6 +84,7 @@ public class MenuManager : MonoBehaviour
     {
         HideAllScreen();
         m_menuScreen.ShowScreen();
+        MapManager.Instance.DisposeMap();
     }
 
     public void SetScore(int score, int highScore)
@@ -93,5 +95,9 @@ public class MenuManager : MonoBehaviour
     public void SetLanguage(Language language)
     {
         m_currentLanguage = language;
+    }
+    public void UpdateTimer(float time)
+    {
+        m_timeSlider.value = time;
     }
 }

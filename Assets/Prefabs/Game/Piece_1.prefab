@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4147487460639669369}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7484380676332543056}
   m_Layer: 0
   m_Name: Piece_1
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,9 +131,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a0fe58ff5626d42a521ee6aa68c28c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_color: {r: 0, g: 0, b: 0, a: 0}
+  m_point: 10
+  m_color: {r: 1, g: 0.94129384, b: 0, a: 1}
   m_origin: {fileID: 4147487460639669374}
-  m_pattern: []
+  m_defaultScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_piecePatterns: []
 --- !u!61 &763403763724631638
 BoxCollider2D:
   m_ObjectHideFlags: 0

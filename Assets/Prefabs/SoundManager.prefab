@@ -304,5 +304,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_musicSource: {fileID: 4875279564646117600}
   m_soundSource: {fileID: 4875279565380327829}
-  m_musicAudio: []
-  m_soundAudio: []
+  m_musicAudio:
+  - m_name: BackgroundMusic
+    m_clip: {fileID: 8300000, guid: 0ed2bfbe4682f1f47bf141c0ca781a02, type: 3}
+  m_soundAudio:
+  - m_name: Click
+    m_clip: {fileID: 8300000, guid: 640edd3301accb048935707c43f685d2, type: 3}
+  - m_name: Collide
+    m_clip: {fileID: 8300000, guid: ad9bf14ae8e7c194e8f504d0274ecbc1, type: 3}
+  - m_name: Merge
+    m_clip: {fileID: 8300000, guid: 2ffdda299424d264abf728d0f252ab5a, type: 3}
+  - m_name: Drag
+    m_clip: {fileID: 8300000, guid: 3ef538df954af2e4e939b82f373ad0bc, type: 3}
+  - m_name: GameOver
+    m_clip: {fileID: 8300000, guid: 285194b6810f3364d902503867c2c58a, type: 3}

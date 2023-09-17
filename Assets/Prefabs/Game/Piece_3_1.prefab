@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8460036428575299276}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8460036428575299274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5777778, y: 0, z: 0}
+  m_LocalPosition: {x: 0.6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4051587931248390559}
   m_Layer: 0
   m_Name: Piece_3_1
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,11 +131,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a0fe58ff5626d42a521ee6aa68c28c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_color: {r: 0, g: 0, b: 0, a: 0}
+  m_point: 30
+  m_color: {r: 1, g: 0.94129384, b: 0, a: 1}
   m_origin: {fileID: 8460036430609160812}
-  m_pattern:
-  - {x: 1, y: 0}
-  - {x: 2, y: 0}
+  m_defaultScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_piecePatterns:
+  - x: 1
+    y: 0
+    Sprite: {fileID: 8460036428575299276}
+  - x: 2
+    y: 0
+    Sprite: {fileID: 8460036429250813665}
 --- !u!61 &-4848339476249609451
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -195,7 +201,7 @@ GameObject:
   - component: {fileID: 8460036429250813665}
   m_Layer: 0
   m_Name: Square (2)
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,7 +214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8460036429250813679}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1555556, y: 0, z: 0}
+  m_LocalPosition: {x: 1.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -279,7 +285,7 @@ GameObject:
   - component: {fileID: 8460036430609160815}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
