@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
     private void ResetGameData()
     {
         m_currentTime = m_gameTimer;
+        m_score = 0;
     }
     private void CalculateScreenSize()
     {
